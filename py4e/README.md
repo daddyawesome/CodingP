@@ -1,1 +1,3 @@
-## Here are my answers to exrcise on coursera python for everybody exercises
+## Python for Everybody Exercises
+
+Here are my answers to exrcise on coursera 
