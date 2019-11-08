@@ -5,4 +5,4 @@
 fName = input("please enter the filename:")
 ext = fName.split(".")
 
-print(ext[1])
+print("Your file Extension is",ext[1])
