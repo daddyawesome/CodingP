@@ -8,3 +8,11 @@ print(greet)
 shout = greet.upper()
 print(shout)
 print("Hi there".lower())
+
+#Searching a String
+fruit ='banana'
+pos =fruit.find('na')
+print(pos)
+
+aa=fruit.find('z')
+print(aa)
