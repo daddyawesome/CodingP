@@ -23,3 +23,13 @@ print(nstr)
 
 nstr =greet.replace('o','X')
 print(nstr)
+
+#Stripping Whitespace
+
+greeet = '    Hello Bob  '
+strp = greeet.lstrip()
+print(strp)
+strp = greeet.rstrip()
+print(strp)
+strp = greeet.strip()
+print(strp)
