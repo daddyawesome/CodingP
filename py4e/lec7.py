@@ -7,6 +7,9 @@ print(fhand)
 
 count = 0
 for line in fhand:
+    #remove the white after each line
+    line = line.rstrip()
+    #print all lines that starts with From
     if line.startswith('From:'):
         print(line)
         count = count + 1
