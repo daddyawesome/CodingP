@@ -5,6 +5,6 @@ for line in han:
     wds = line.split()
     
     #Guardian in a compound statement
-    if len(wds) < 1 or wds[0] != 'From':
+    if len(wds) < 3 or wds[0] != 'From':
         continue
     print(wds[2])
