@@ -20,6 +20,6 @@ maxnum = None
 for k,v in emails.items():
     if maxnum is None or v > maxnum:
         maxword = k
-        manum = v
+        maxnum = v
         
 print(maxword,maxnum)
