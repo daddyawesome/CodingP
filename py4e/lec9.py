@@ -8,3 +8,9 @@ for c in word:
     else:
         d[c] = d[c] + 1
 print(d)
+
+#Same as above but with get method 
+letters =dict()
+for l in word:
+    letters[l] = letters.get(l, 0) +1
+print(letters)
