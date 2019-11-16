@@ -7,10 +7,10 @@ for line in fhand:
 
 lst = list()
 for key, val in counts.items():
-    newtup() = (val,key)
+    newtup = (val,key)
     lst.append(newtup)
     
-lst = sorted(lst, reversed=True)
+lst = sorted(lst, reverse=True)
 
 for val, key in lst[:10]:
     print(key,val)
