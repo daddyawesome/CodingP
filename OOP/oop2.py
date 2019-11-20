@@ -28,6 +28,11 @@ class Employee:
         return cls(first, last, pay)
         cls.raise_amt = amount
     
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
     
 emp_1 = Employee('Mark','Russel', 50000)
 emp_2 = Employee('Test', 'User', 40000)
@@ -36,8 +41,6 @@ emp_str_1 = 'Daddy-Awesome-20000'
 emp_str_2 = 'John-Doe-11500'
 emp_str_3 = 'Jane-Doe-40500'
 
-new_emp_1 = Employee.from_string(emp_str_1)
-print(new_emp_1.email)
-print(new_emp_1.pay)
- 
-print('Total Number of Employee',Employee.num_of_emps)
+import datetime
+my_date = datetime.date(2016,7,10)
+print(Employee.is_workday(my_date))
