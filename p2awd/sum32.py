@@ -1,5 +1,5 @@
 import re
-hand = open("sum42.txt")
+hand = open("sum32.txt")
 numlist = list()
 
 for line in hand:
