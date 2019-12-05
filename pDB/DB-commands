@@ -11,3 +11,11 @@ DELETE FROM Users WHERE email='yumi@awesome.com'
 
 
 UPDATE Users SET name = 'Mark' WHERE email='mark@awesome.com'
+
+SELECT * FROM Users
+
+SELECT * FROM Users WHERE email='daddy@awesome.com'
+
+SELECT * FROM Users ORDER BY email
+
+SELECT * FROM Users ORDER BY name
