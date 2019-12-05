@@ -6,3 +6,8 @@ CREATE TABLE Users(
 
 INSERT INTO Users (name,email) 
 VALUES ('Russel Awesome', 'russel@awesome.com')
+
+DELETE FROM Users WHERE email='yumi@awesome.com'
+
+
+UPDATE Users SET name = 'Mark' WHERE email='mark@awesome.com'
