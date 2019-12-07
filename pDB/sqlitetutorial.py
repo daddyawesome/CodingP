@@ -4,7 +4,7 @@ import sqlite3
 con = sqlite3.connect('db.sqlite3')
 cur = con.cursor() # instantiate a cursor obj
 
-Creating Tables
+#Creating Tables
 customers_sql = """
  CREATE TABLE customers (
      id integer PRIMARY KEY,
