@@ -27,3 +27,15 @@ orders_sql = """
      FOREIGN KEY (customer_id) REFERENCES customers (id))"""
 cur.execute(orders_sql)
 
+#Loading the Data
+
+product_sql = "INSERT INTO products (name, price) VALUES (?, ?)"
+cur.execute(product_sql, ('Introduction to Combinatorics', 7.99))
+cur.execute(product_sql, ('A Guide to Writing Short Stories', 17.99))
+cur.execute(product_sql, ('Data Structures and Algorithms', 11.99))
+cur.execute(product_sql, ('Advanced Set Theory', 16.99))
+
+cur.execute("SELECT id, name, price FROM products")
+formatted_result = [f"{id:<5}{name:<35}{price:>5}" for id, name, price in cur.fetchall()]
+id, product, price = "Id", "Product", "Price"
+print('\n'.join([f"{id:<5}{product:<35}{price:>5}"] + formatted_result))
