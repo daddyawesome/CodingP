@@ -35,6 +35,7 @@ cur.execute(product_sql, ('A Guide to Writing Short Stories', 17.99))
 cur.execute(product_sql, ('Data Structures and Algorithms', 11.99))
 cur.execute(product_sql, ('Advanced Set Theory', 16.99))
 
+#Checking Data
 cur.execute("SELECT id, name, price FROM products")
 formatted_result = [f"{id:<5}{name:<35}{price:>5}" for id, name, price in cur.fetchall()]
 id, product, price = "Id", "Product", "Price"
