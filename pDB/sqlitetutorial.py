@@ -4,7 +4,10 @@ import sqlite3
 con = sqlite3.connect('db.sqlite3')
 cur = con.cursor() # instantiate a cursor obj
 
-Creating Tables
+#Creating Tables
+cur.execute('DROP TABLE IF EXISTS customers')
+cur.execute('DROP TABLE IF EXISTS products')
+cur.execute('DROP TABLE IF EXISTS orders')
 customers_sql = """
  CREATE TABLE customers (
      id integer PRIMARY KEY,
@@ -39,3 +42,29 @@ cur.execute("SELECT id, name, price FROM products")
 formatted_result = [f"{id:<5}{name:<35}{price:>5}" for id, name, price in cur.fetchall()]
 id, product, price = "Id", "Product", "Price"
 print('\n'.join([f"{id:<5}{product:<35}{price:>5}"] + formatted_result))
+
+#Creating Methods to Insert Data to Tables
+def create_customer(con, first_name, last_name):
+    sql = """
+        INSERT INTO customers (first_name, last_name)
+        VALUES (?, ?)"""
+    cur = con.cursor()
+    cur.execute(sql, (first_name, last_name))
+    return cur.lastrowid
+
+def create_order(con, customer_id, date):
+    sql = """
+        INSERT INTO orders (customer_id, date)
+        VALUES (?, ?)"""
+    cur = con.cursor()
+    cur.execute(sql, (customer_id, date))
+    return cur.lastrowid
+
+def create_lineitem(con, order_id, product_id, qty, total):
+    sql = """
+        INSERT INTO lineitems
+            (order_id, product_id, quantity, total)
+        VALUES (?, ?, ?, ?)"""
+    cur = con.cursor()
+    cur.execute(sql, (order_id, product_id, qty, total))
+    return cur.lastrowid
