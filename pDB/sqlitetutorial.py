@@ -5,10 +5,13 @@ con = sqlite3.connect('db.sqlite3')
 cur = con.cursor() # instantiate a cursor obj
 
 #Creating Tables
+<<<<<<< HEAD
 cur.execute('DROP TABLE IF EXISTS customers')
 cur.execute('DROP TABLE IF EXISTS products')
 cur.execute('DROP TABLE IF EXISTS orders')
 cur.execute('DROP TABLE IF EXISTS lineitems')
+=======
+>>>>>>> bc9ac2429747cc303da6c07d113ccb69787e6384
 customers_sql = """
  CREATE TABLE customers (
      id integer PRIMARY KEY,
@@ -50,6 +53,7 @@ cur.execute(product_sql, ('A Guide to Writing Short Stories', 17.99))
 cur.execute(product_sql, ('Data Structures and Algorithms', 11.99))
 cur.execute(product_sql, ('Advanced Set Theory', 16.99))
 
+#Checking Data
 cur.execute("SELECT id, name, price FROM products")
 formatted_result = [f"{id:<5}{name:<35}{price:>5}" for id, name, price in cur.fetchall()]
 id, product, price = "Id", "Product", "Price"
