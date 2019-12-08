@@ -2,16 +2,15 @@ import sqlite3
 
 #create database
 con = sqlite3.connect('db.sqlite3')
+
 cur = con.cursor() # instantiate a cursor obj
 
 #Creating Tables
-<<<<<<< HEAD
 cur.execute('DROP TABLE IF EXISTS customers')
 cur.execute('DROP TABLE IF EXISTS products')
 cur.execute('DROP TABLE IF EXISTS orders')
 cur.execute('DROP TABLE IF EXISTS lineitems')
-=======
->>>>>>> bc9ac2429747cc303da6c07d113ccb69787e6384
+
 customers_sql = """
  CREATE TABLE customers (
      id integer PRIMARY KEY,
@@ -107,5 +106,18 @@ cur.execute("SELECT id, first_name, last_name FROM customers")
 results = cur.fetchall()
 for row in results:
      print(row)
+
+cur.close()
+#TheMAGIC The "magic" is in the line:
+#   con.row_factory = sqlite3.Row
+#which allows me to interact with the fetched results in dictionaries instead of tuples.
+
+con.row_factory = sqlite3.Row
+cur = con.cursor() # instantiate a cursor obj
+
+cur.execute("SELECT id, first_name, last_name FROM customers WHERE id = 2")
+result = cur.fetchone()
+id, first_name, last_name = result['id'], result['first_name'], result['last_name']
+print(f"Customer: {first_name} {last_name}'s id is {id}")
 
 cur.close()
