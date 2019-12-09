@@ -1,3 +1,5 @@
 #ignore files here
 aaa
 .bash_history
+.gitignore
+hidden.py
