@@ -16,3 +16,6 @@ PROJECTS TO MAKE
 3. Data Visualization
 4. game with Pygame (not good)
 5. qt tkinter(not good)
+
+Make Dashhboard
+https://towardsdatascience.com/how-to-build-a-complex-reporting-dashboard-using-dash-and-plotl-4f4257c18a7f
