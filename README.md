@@ -1,6 +1,6 @@
 # CodingP
 ## This Repository serves as my repo for my coding practice specially in PYTHON.
-Most of the codes in this repo are my codes base on the [PYTHON SPECIALIZATION FROM COURSERA] (https://www.coursera.org/programs/python-for-everyone-specialization-a-2019-7uhtg?currentTab=CATALOG&productId=F-h1g0w7EeWeOApO_l5R1w&productType=s12n&showMiniModal=true)
+Most of the codes in this repo are my codes base on the [PYTHON SPECIALIZATION FROM COURSERA](https://www.coursera.org/specializations/python)
 
 BOOKS to Follow
 1. Learn Python the Hardway
@@ -17,5 +17,4 @@ PROJECTS TO MAKE
 4. game with Pygame (not good)
 5. qt tkinter(not good)
 
-Make Dashhboard
-https://towardsdatascience.com/how-to-build-a-complex-reporting-dashboard-using-dash-and-plotl-4f4257c18a7f
+[Make Dashhboard](https://towardsdatascience.com/how-to-build-a-complex-reporting-dashboard-using-dash-and-plotl-4f4257c18a7f)
