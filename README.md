@@ -12,3 +12,7 @@ BOOKS to Follow
 
 PROJECTS TO MAKE
 1. A web app / website django or flask (learn in bewteen HTML and CSS)
+2. Solve problems from KAGGLE ('wishful')(study machine learning)
+3. Data Visualization
+4. game with Pygame (not good)
+5. qt tkinter(not good)
