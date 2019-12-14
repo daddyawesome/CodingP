@@ -3,3 +3,4 @@ aaa
 .bash_history
 .gitignore
 hidden.py
+env/
