@@ -19,3 +19,8 @@ PROJECTS TO MAKE
 
 [Make Dashhboard](https://towardsdatascience.com/how-to-build-a-complex-reporting-dashboard-using-dash-and-plotl-4f4257c18a7f)
 [Finance Dashhboard](https://towardsdatascience.com/python-for-finance-dash-by-plotly-ccf84045b8be)
+
+
+For my Baby Yumi
+[Python For kids](http://www.python.kidsgo.ca/python-lessons-2/)
+[Khan Drawing in JS](https://www.khanacademy.org/computing/computer-programming/programming)
