@@ -24,3 +24,4 @@ PROJECTS TO MAKE
 For my Baby Yumi
 [Python For kids](http://www.python.kidsgo.ca/python-lessons-2/)
 [Khan Drawing in JS](https://www.khanacademy.org/computing/computer-programming/programming)
+[Scrtch](https://inventwithscratch.com/book/chapter2.html)
