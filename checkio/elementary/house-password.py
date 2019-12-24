@@ -24,3 +24,11 @@ if __name__ == '__main__':
     assert checkio('123456123456') == False, "5th example"
     assert checkio('QwErTy911poqqqq') == True, "6th example"
     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
+
+ #other solution
+def checkio2(data):
+    return True if re.search("^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*$", data) and len(data) >= 10 else False
+
+def checkio3(data):
+    # (?=) is positive lookahead. Use this construction to make sure the enclosed pattern exists
+    return bool(re.search(r'^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$', data))
