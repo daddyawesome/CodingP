@@ -30,3 +30,16 @@ for i in range(len(string)):
 print("\nTotal Number of Alphabets in this String :  ", alphabets)
 print("Total Number of Digits in this String :  ", digits)
 print("Total Number of Special Characters in this String :  ", special)
+
+#brilliant solution
+import string
+def checkio2(text):
+    text = text.lower()
+    return max(string.ascii_lowercase, key=text.count)
+print(checkio2("AAaooo!!!!"))
+
+
+#other solution
+from string import ascii_lowercase as letters
+checkio = lambda text: max(letters, key=text.lower().count)
+
