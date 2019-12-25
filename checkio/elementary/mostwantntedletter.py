@@ -1,15 +1,20 @@
 def checkio(words):
     str1 =str.lower(words)
-    dict = {}
+    counts =dict()
     for n in str1:
-        keys = dict.keys()
-        if n in keys:
-            dict[n] += 1
-        else:
-            dict[n] = 1
-    print (dict)
-    d3={v:k for k,v in dict.items()}
+        if(n.isalpha()):
+            counts[n] = counts.get(n, 0) +1
+        else: 
+            continue
+    print (counts)
+    d3={v:k for k,v in counts.items()}
     return d3[max(d3)]
+
+if __name__ == '__main__':
+    print("Example:")
+    print(checkio("Hello World!"))
+
+#count the alphabet, the numbers and the special
 string = input("Please Enter your Own String : ")
 alphabets = digits = special = 0
 
