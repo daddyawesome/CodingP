@@ -21,3 +21,8 @@ if __name__ == '__main__':
     assert correct_sentence("welcome to New York") == "Welcome to New York."
     
     print("Coding complete? Click 'Check' to earn cool rewards!")
+
+    
+ #Other solution
+ def correct_sentence(text: str) -> str:
+    return text[0].upper() + text[1:] + ("." if text[-1] != "." else "")
