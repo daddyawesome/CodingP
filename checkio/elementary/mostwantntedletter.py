@@ -1,18 +1,19 @@
-def checkio(words):
-    str1 =str.lower(words)
-    counts =dict()
-    for n in str1:
-        if(n.isalpha()):
-            counts[n] = counts.get(n, 0) +1
-        else: 
-            continue
-    print (counts)
-    d3={v:k for k,v in counts.items()}
-    return d3[max(d3)]
+import re
+def checkio(text):
+
+    text = text.lower()
+    list1 = re.findall(r'[a-zA-Z]',text)
+    set1 = set(list1)
+    times = []
+    for i in set1:
+        times.append(list1.count(i))
+    d = dict(zip(set1,times))
+    d1 = sorted(d.items(),key = lambda x: (-x[1], x[0])) 
+    return d1[0][0]
 
 if __name__ == '__main__':
     print("Example:")
-    print(checkio("Hello World!"))
+    print(checkio("AAaooo!!!!"))
 
 #count the alphabet, the numbers and the special
 string = input("Please Enter your Own String : ")
