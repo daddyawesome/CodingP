@@ -7,19 +7,24 @@ If there is no final marker, then the last character should be considered the en
 If the initial and final markers are missing then simply return the whole string.
 If the final marker comes before the initial marker, then return an empty string.
 '''
-
 def between_markers(text: str, begin: str, end: str) -> str:
-    try:
-        start = (text.split(begin))[1]
-        word =  start.split(end)[0]
-    except:
-        word = text.split(end)[0]
-    return word
+    if begin in text:
+        begin_index = text.find(begin) + len(begin)
+    else:
+        begin_index = 0
+        
+    if end in text:
+        end_index = text.find(end)
+    else:
+        end_index = len(text)
+        
+    return text[begin_index:end_index]
 
 
 if __name__ == '__main__':
     print('Example:')
     print(between_markers('What is >apple<', '>', '<'))
+    print(between_markers('No <hi>', '>', '<'))
 
     # These "asserts" are used for self-checking and not for testing
     assert between_markers('What is >apple<', '>', '<') == "apple", "One sym"
