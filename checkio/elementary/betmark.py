@@ -2,8 +2,6 @@ def between_markers( s, first, last ):
     try:
         start = s.index( first ) + len( first )
         end = s.index( last, start )
-        print(start)
-        print(end)
         return s[start:end]
 
     except ValueError:
