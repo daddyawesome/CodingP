@@ -9,7 +9,7 @@ def time_converter(time):
     x = ctime[0]
     
     if int(x) < 12:
-        time = time + " a.m."
+        time = str(int(x)) +":"+ctime[1] + " a.m."
     elif int(x) == 12:
         time = time + " p.m."
     else:
