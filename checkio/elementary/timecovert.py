@@ -8,7 +8,9 @@ def time_converter(time):
     ctime = time.split(":")
     x = ctime[0]
     
-    if int(x) < 12:
+    if int(x) == 0:
+        time = "12"+":"+ctime[1] + " a.m."
+    elif int(x) < 12:
         time = str(int(x)) +":"+ctime[1] + " a.m."
     elif int(x) == 12:
         time = time + " p.m."
@@ -26,3 +28,7 @@ if __name__ == '__main__':
     assert time_converter('09:00') == '9:00 a.m.'
     assert time_converter('23:15') == '11:15 p.m.'
     print("Coding complete? Click 'Check' to earn cool rewards!")
+    
+    
+    
+    
