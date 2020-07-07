@@ -1,3 +1,6 @@
+'''
+Weighted Mean
+'''
 n = input()
 
 elements = input()
