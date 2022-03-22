@@ -15,6 +15,10 @@ width = 40
 height = 60
 vel = 5
 
+#add jumping
+isJump = False
+jumpCount = 10
+
 # Run until the user asks to quit
 running = True
 
@@ -33,13 +37,26 @@ while running:
 
     if keys[pygame.K_RIGHT] and x < 500 - vel - width:  # Making sure the top right corner of our character is less than the screen width - its width 
         x += vel
+    
+    if not(isJump): # Checks is user is not jumping
+        if keys[pygame.K_UP] and y > vel:  # Same principles apply for the y coordinate
+            y -= vel
 
-    if keys[pygame.K_UP] and y > vel:  # Same principles apply for the y coordinate
-        y -= vel
+        if keys[pygame.K_DOWN] and y < 500 - height - vel:
+            y += vel
 
-    if keys[pygame.K_DOWN] and y < 500 - height - vel:
-        y += vel
-        
+        if keys[pygame.K_SPACE]:
+            isJump = True
+    else:
+        # This is what will happen if we are jumpin      
+        if jumpCount >= -10:
+            y -= (jumpCount * abs(jumpCount)) * 0.5
+            jumpCount -= 1
+        else: 
+            jumpCount = 10
+            isJump = False
+
+
     win.fill((0,0,0))  # Fills the screen with black to make the block looks like it is moving
     pygame.draw.rect(win, (255,0,0), (x, y, width, height))   
     pygame.display.update()
