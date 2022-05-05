@@ -3,7 +3,7 @@ quake = float(input("QUAKE:"))
 if quake < 2.0:    
     print("Micro")
 
-elif quake < 2.0:
+elif quake < 3.0:
     print("Very minor")
 
 elif quake < 4.0:
