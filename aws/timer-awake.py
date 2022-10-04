@@ -1,3 +1,4 @@
+# This is a timer to make my mouse move
 import pyautogui
 import time
 import sys
